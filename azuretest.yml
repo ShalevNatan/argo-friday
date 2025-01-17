@@ -1,0 +1,10 @@
+trigger:
+- main  # Adjust to your branch name if it's not 'main'
+
+pool:
+  name: 'AnsibleAgent'  # Use your self-hosted agent pool name
+
+steps:
+- script: |
+    echo "gavi world" >> /home/ansible_user/gavi.txt
+  displayName: "Echo hello world into gavi.txt"
